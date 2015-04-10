@@ -33,6 +33,10 @@ static int loopcounter;
 
 +(BOOL)initCalc
 {
+    allcounter=0;
+    zerocounter=0;
+    loopcounter=0;
+    
     for( int i = 0 ; i < 100 ; ++i ){
         for( int j = 0 ; j < 100 ; ++j ){
             [SpeedTest decreaseRecursion:100000];
@@ -47,9 +51,6 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         NSDate *startDate = [NSDate date];
-        allcounter=0;
-        zerocounter=0;
-        loopcounter=0;
         NSLog(@"Start!\n");
         
         if([SpeedTest initCalc]){
