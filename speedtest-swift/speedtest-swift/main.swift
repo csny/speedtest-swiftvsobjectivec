@@ -13,14 +13,14 @@ var allcounter: Int=0
 var zerocounter: Int=0
 var loopcounter: Int=0
 
-func minusCalc(var cnt: Int)
+func decreaseRecursion(var cnt: Int)
 {
     allcounter++
     if( cnt == 0 ){
         zerocounter++
         return
     }else{
-        minusCalc(--cnt)
+        decreaseRecursion(--cnt)
     }
 }
 
@@ -28,7 +28,7 @@ func initCalc() -> Bool
 {
     for var i:Int=0;i<100;++i{
         for var j:Int=0;j<100;++j{
-            minusCalc(100000)
+            decreaseRecursion(100000)
             loopcounter++
         }
     }
@@ -42,7 +42,7 @@ if initCalc() {
     println("End")
     let elapsed = NSDate().timeIntervalSinceDate(startDate)
     println(elapsed)
-    println("zerocnt:\(zerocounter), loopcnt:\(loopcounter), allcnt:\(allcounter)")
+    println("allcnt:\(allcounter), zerocnt:\(zerocounter), loopcnt:\(loopcounter)")
 }else{
     println("Error!")
 }

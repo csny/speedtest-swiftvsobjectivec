@@ -12,21 +12,22 @@
 
 @end
 
+// debug class variable
+static long allcounter;
+static int zerocounter;
+static int loopcounter;
+
 @implementation SpeedTest
 
-// debug variable
-long allcounter = 0;
-int zerocounter=0;
-int loopcounter=0;
 
-+(void)minusCalc:(NSInteger)cnt
++(void)decreaseRecursion:(NSInteger)cnt
 {
     allcounter++;
     if( cnt == 0 ){
         zerocounter++;
         return;
     }else{
-        [SpeedTest minusCalc:--cnt];
+        [SpeedTest decreaseRecursion:--cnt];
     }
 }
 
@@ -34,7 +35,7 @@ int loopcounter=0;
 {
     for( int i = 0 ; i < 100 ; ++i ){
         for( int j = 0 ; j < 100 ; ++j ){
-            [SpeedTest minusCalc:100000];
+            [SpeedTest decreaseRecursion:100000];
             loopcounter++;
         }
     }
@@ -46,13 +47,16 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         NSDate *startDate = [NSDate date];
+        allcounter=0;
+        zerocounter=0;
+        loopcounter=0;
         NSLog(@"Start!\n");
         
         if([SpeedTest initCalc]){
             NSLog(@"End\n");
             NSTimeInterval interval = [[NSDate date] timeIntervalSinceDate:startDate];
             NSLog(@"%lf",interval);
-            NSLog(@"zerocnt:%d, loopcnt:%d, allcnt:%ld",zerocounter,loopcounter,allcounter);
+            NSLog(@"allcnt:%ld, zerocnt:%d, loopcnt:%d",allcounter,zerocounter,loopcounter);
         } else {
             NSLog(@"Error!");
         }

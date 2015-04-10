@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5EFEE965-043A-44CB-9286-49ADA4D7737C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>speedtest-objc</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>181D217EE30E484C5124C6939422EC2324F86AA2</key>
+		<string>https://github.com/csny/speedtest-swiftvsobjectivec.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>speedtest-objc/speedtest-objc.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>181D217EE30E484C5124C6939422EC2324F86AA2</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/csny/speedtest-swiftvsobjectivec.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>181D217EE30E484C5124C6939422EC2324F86AA2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>181D217EE30E484C5124C6939422EC2324F86AA2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>speedtest-swiftvsobjectivec</string>
+		</dict>
+	</array>
+</dict>
+</plist>
