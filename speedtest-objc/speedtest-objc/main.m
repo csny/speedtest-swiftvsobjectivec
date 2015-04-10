@@ -20,7 +20,7 @@ static int loopcounter;
 @implementation SpeedTest
 
 
-+(void)decreaseRecursion:(NSInteger)cnt
++ (void)decreaseRecursion:(NSInteger)cnt
 {
     allcounter++;
     if( cnt == 0 ){
@@ -31,7 +31,7 @@ static int loopcounter;
     }
 }
 
-+(BOOL)initCalc
++ (BOOL)initCalc
 {
     allcounter=0;
     zerocounter=0;
