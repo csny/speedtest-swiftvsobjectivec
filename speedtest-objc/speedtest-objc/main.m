@@ -20,14 +20,14 @@ static int loopcounter;
 @implementation SpeedTest
 
 
-+ (void)decreaseRecursion:(NSInteger)cnt
++ (void)recurseDecreasing:(NSInteger)cnt
 {
     allcounter++;
     if( cnt == 0 ){
         zerocounter++;
         return;
     }else{
-        [SpeedTest decreaseRecursion:--cnt];
+        [SpeedTest recurseDecreasing:--cnt];
     }
 }
 
@@ -39,7 +39,7 @@ static int loopcounter;
     
     for( int i = 0 ; i < 100 ; ++i ){
         for( int j = 0 ; j < 100 ; ++j ){
-            [SpeedTest decreaseRecursion:100000];
+            [SpeedTest recurseDecreasing:100000];
             loopcounter++;
         }
     }

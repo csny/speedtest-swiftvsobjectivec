@@ -13,14 +13,14 @@ var allcounter: Int=0
 var zerocounter: Int=0
 var loopcounter: Int=0
 
-func decreaseRecursion(var cnt: Int)
+func recurseDecreasing(var cnt: Int)
 {
     allcounter++
     if( cnt == 0 ){
         zerocounter++
         return
     }else{
-        decreaseRecursion(--cnt)
+        recurseDecreasing(--cnt)
     }
 }
 
@@ -28,7 +28,7 @@ func initCalc() -> Bool
 {
     for var i:Int=0;i<100;++i{
         for var j:Int=0;j<100;++j{
-            decreaseRecursion(100000)
+            recurseDecreasing(100000)
             loopcounter++
         }
     }
